@@ -1,0 +1,28 @@
+<div class="d-flex flex-wrap justify-content-center">
+<div class="card m-3"
+        style="width: 15rem;" 
+        *ngFor="let affirmation of affirmations">
+        <img class="card-img-top img-thumbnail" 
+            [src]="affirmation.imgSrc" 
+            alt="Card image cap">
+        <div class="card-body">
+            <p class="card-text">{{affirmation.affirmation}}</p>
+            <button class="btn btn-primary" 
+            *ngIf="!affirmation.translation; else showTranslation"
+            (click)="translate(affirmation)">Translate</button>
+            <ng-template #showTranslation>
+                <p>{{affirmation.translation}}</p></ng-template>
+        </div>
+    </div>
+</div>
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-end">
+      <li class="page-item" [class.disabled]="currPage == 1">
+        <button class="page-link" (click)="page(false)"tabindex="-1">Previous</button>
+      </li>
+      <li class="page-item" [class.disabled]="currPage == totalPages">
+        <button class="page-link" (click)="page()">Next</button>
+      </li>
+    </ul>
+  </nav>
+    <button class="btn btn-secondary mt-2" (click)="addAffirmation()">Add Affirmation</button>

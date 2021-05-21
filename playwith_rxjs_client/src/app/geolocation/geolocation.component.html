@@ -1,0 +1,11 @@
+<div class="d-inline-flex"
+    *ngIf="position.value; else loading">
+        <p>You are here: 
+            <input type="text"
+            [formControl]="position" />
+        </p>
+</div>
+<ng-template #loading>
+    <p>Loading ...</p>
+</ng-template>
+

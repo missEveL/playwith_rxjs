@@ -1,0 +1,17 @@
+{
+  "name": "playwith_rxjs",
+  "version": "0.0.0",
+  "description": "API for playwith_rxjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "8.0.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "memory-cache": "^0.2.0"
+  }
+}

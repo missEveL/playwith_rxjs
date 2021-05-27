@@ -3,10 +3,10 @@
       <div class="bg-light p-4">
         <div class="row d-flex flex-row">
             <div class="col">
-                <app-geolocation></app-geolocation>
+                <app-geolocation (coords)="setCoords($event)"></app-geolocation>
             </div>
             <div class="col">
-                <app-weather-forecast></app-weather-forecast>
+                <app-weather-forecast [coords]="coordsInput"></app-weather-forecast>
             </div>
         </div>
     </div>

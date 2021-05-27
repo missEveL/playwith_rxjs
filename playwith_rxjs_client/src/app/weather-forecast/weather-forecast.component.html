@@ -1,1 +1,4 @@
-<img *ngIf="forecastImg" [src]="forecastImg" />
+<img *ngIf="forecastImg, else loading" [src]="forecastImg" />
+<ng-template #loading>
+    <p>Loading...</p>
+</ng-template>
